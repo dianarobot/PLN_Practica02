@@ -1,0 +1,227 @@
+# Práctica 2
+Este es el archivo README de la práctica 2.
+En este repositorio se encuentran los archivos requeridos para el juego de nombres:
+
+* agente.py
+Este archivo contiene la clase agente que tiene los métodos:
+-nombrar. Genera palabras de 1 a 8 sílabas.
+-enunciar. Se encarga de la comunicación entre el hablante y el oyente.
+-generateObjectName. Este método asigna un nombre inventado para un objeto que no conoce el hablante.
+-getSmallerName. Obtiene el nombre más pequeño de una lista de nombres de un objeto dado.
+
+* juegoNombres
+Está compuesto por la clase JuegoNombres y el main. La clase JuegoNombres cuenta con los siguientes métodos:
+-selectAgentesObjetos. Selecciona un hablante, oyente y un objeto de forma aleatoria.
+-getAllNamesObjects. Obtiene todos los nombres por objeto sin repetirse, que han asignado los agentes.
+-countNamesObjects. Calcula el número de nombres no repetidos de objetos.
+-countNamesByObjects. Calcula el número de nombres no repetidos por objeto.
+-namesLen= Calcula la longitud promedio de todos los nombres no repetidos.
+-showMetricas. Muestra en consola los resultados de countNamesObjects, countNamesByObjects y namesLen.
+-startGame. Inicializa el juego dentro de un ciclo de acuerdo un número máximo de iteraciones
+
+### Prerequisitos
+Aquí van los paquetes que se necesitan para que esta cosa funcione.
+
+### Instalar
+Aquí van las instrucciones de instalación del proyecto, de modo que
+alguien más lo pueda ejecutar sin ayuda del desarrollador.
+
+### Ejecutar Ejercicio en Consola
+El script requiere 3 parámetros para ejecutar el archivo en consola:
+n-> Número de Agentes
+m-> Número de Objetos
+max_t -> Número máximo de Iteraciones
+python juegoNombres.py n m max_t
+
+Un ejemplo de ejecución con parámetros sería:
+python juegoNombres.py 14 7 1000
+
+En consola se mostrarían los siguientes resultados (se omitieron algunos para evitar hacer una lista muy larga)
+
+
+## Autor
+* **Diana Rocha Botello** - *Práctica 2* - [Repositorio](https://github.com/dianarobot)
+
+
+Iteración 1                                                              
+M É T R I C A S                                                         
+1) Número total de nombres conocidos: 1                                 
+2) Número total de nombres para cada objeto                              
+Objeto 0: 1                                                              
+Objeto 1: 0                                                              
+Objeto 2: 0                                                              
+Objeto 3: 0                                                              
+Objeto 4: 0                                                              
+Objeto 5: 0                                                              
+Objeto 6: 0                                                              
+3) Longitud promedio de todos los nombres: 6.0                           -----------------------------------                                      -----------------------------------                                      
+Iteración 2                                                              
+M É T R I C A S                                                         
+1) Número total de nombres conocidos: 2                                 
+2) Número total de nombres para cada objeto                             
+Objeto 0: 1                                                             
+Objeto 1: 0                                                             
+Objeto 2: 0                                                             
+Objeto 3: 0                                                             
+Objeto 4: 1                                                             
+Objeto 5: 0                                                             
+Objeto 6: 0                                                              
+3) Longitud promedio de todos los nombres: 5.0                           -----------------------------------                                      -----------------------------------                                      
+Iteración 3                                                              
+M É T R I C A S                                                         
+1) Número total de nombres conocidos: 3                                 
+2) Número total de nombres para cada objeto                              
+Objeto 0: 1                                                              
+Objeto 1: 0                                                              
+Objeto 2: 0                                                              
+Objeto 3: 0                                                              
+Objeto 4: 1                                                              
+Objeto 5: 1                                                              
+Objeto 6: 0                                                              
+3) Longitud promedio de todos los nombres: 4.0                           -----------------------------------                                      -----------------------------------                                      
+Iteración 4                                                              
+M É T R I C A S                                                         
+1) Número total de nombres conocidos: 4                                 
+2) Número total de nombres para cada objeto                              
+Objeto 0: 1                                                              
+Objeto 1: 0                                                              
+Objeto 2: 0                                                              
+Objeto 3: 0                                                              
+Objeto 4: 1                                                              
+Objeto 5: 2                                                              
+Objeto 6: 0                                                              
+3) Longitud promedio de todos los nombres: 3.5                           -----------------------------------                                      -----------------------------------                                      
+Iteración 5                                                              
+M É T R I C A S                                                         
+1) Número total de nombres conocidos: 5                                 
+2) Número total de nombres para cada objeto                              
+Objeto 0: 1                                                              
+Objeto 1: 0                                                              
+Objeto 2: 0                                                              
+Objeto 3: 1                                                              
+Objeto 4: 1                                                              
+Objeto 5: 2                                                              
+Objeto 6: 0                                                              
+3) Longitud promedio de todos los nombres: 3.2                           -----------------------------------                                      -----------------------------------                                      
+Iteración 6                                                              
+M É T R I C A S                                                         
+1) Número total de nombres conocidos: 5                                 
+2) Número total de nombres para cada objeto                              
+Objeto 0: 1                                                              
+Objeto 1: 0                                                              
+Objeto 2: 0                                                              
+Objeto 3: 1                                                              
+Objeto 4: 1                                                              
+Objeto 5: 2                                                              
+Objeto 6: 0                                                              
+3) Longitud promedio de todos los nombres: 3.2                           -----------------------------------                                      -----------------------------------                                      
+Iteración 7                                                              
+M É T R I C A S                                                         
+1) Número total de nombres conocidos: 6                                 
+2) Número total de nombres para cada objeto                              
+Objeto 0: 1                                                              
+Objeto 1: 0                                                              
+Objeto 2: 0                                                              
+Objeto 3: 1                                                              
+Objeto 4: 1                                                              
+Objeto 5: 2                                                              
+Objeto 6: 1                                                              
+3) Longitud promedio de todos los nombres: 3.6666666666666665            -----------------------------------                                      -----------------------------------                                      
+Iteración 8                                                              
+M É T R I C A S                                                         
+1) Número total de nombres conocidos: 7                                 
+2) Número total de nombres para cada objeto                              
+Objeto 0: 1                                                              
+Objeto 1: 0                                                              
+Objeto 2: 0                                                              
+Objeto 3: 1                                                              
+Objeto 4: 2                                                              
+Objeto 5: 2                                                              
+Objeto 6: 1                                                              
+3) Longitud promedio de todos los nombres: 4.0                           -----------------------------------                                      -----------------------------------                                      
+Iteración 9                                                              
+M É T R I C A S                                                         
+1) Número total de nombres conocidos: 8                                 
+2) Número total de nombres para cada objeto                              
+Objeto 0: 1                                                              
+Objeto 1: 0                                                              
+Objeto 2: 1                                                              
+Objeto 3: 1                                                              
+Objeto 4: 2                                                              
+Objeto 5: 2                                                              
+Objeto 6: 1                                                              
+3) Longitud promedio de todos los nombres: 5.5                           -----------------------------------                                      -----------------------------------                                      
+Iteración 10                                                             
+M É T R I C A S                                                         
+1) Número total de nombres conocidos: 9                                 
+2) Número total de nombres para cada objeto                              
+Objeto 0: 1                                                              
+Objeto 1: 0                                                              
+Objeto 2: 1                                                              
+Objeto 3: 1                                                              
+Objeto 4: 3                                                              
+Objeto 5: 2                                                              
+Objeto 6: 1                                                              
+3) Longitud promedio de todos los nombres: 5.111111111111111             -----------------------------------                                      -----------------------------------
+-----------------------------------                                   -----------------------------------                                   
+Iteración 996                                                         
+M É T R I C A S                                                       
+1) Número total de nombres conocidos: 49                              
+2) Número total de nombres para cada objeto                           
+Objeto 0: 9                                                           
+Objeto 1: 8                                                           
+Objeto 2: 7                                                           
+Objeto 3: 6                                                           
+Objeto 4: 5                                                           
+Objeto 5: 8                                                           
+Objeto 6: 6                                                           
+3) Longitud promedio de todos los nombres: 9.306122448979592          -----------------------------------                                   -----------------------------------                                   
+Iteración 997                                                         
+M É T R I C A S                                                       
+1) Número total de nombres conocidos: 49                              
+2) Número total de nombres para cada objeto                          
+Objeto 0: 9                                                          
+Objeto 1: 8                                                          
+Objeto 2: 7                                                          
+Objeto 3: 6                                                          
+Objeto 4: 5                                                          
+Objeto 5: 8                                                          
+Objeto 6: 6                                                           
+3) Longitud promedio de todos los nombres: 9.306122448979592          -----------------------------------                                   -----------------------------------                                   
+Iteración 998                                                         
+M É T R I C A S                                                       
+1) Número total de nombres conocidos: 49                              
+2) Número total de nombres para cada objeto                           
+Objeto 0: 9                                                           
+Objeto 1: 8                                                           
+Objeto 2: 7                                                           
+Objeto 3: 6                                                           
+Objeto 4: 5                                                           
+Objeto 5: 8                                                           
+Objeto 6: 6                                                           
+3) Longitud promedio de todos los nombres: 9.306122448979592          -----------------------------------                                   -----------------------------------                                   
+Iteración 999                                                         
+M É T R I C A S                                                       
+1) Número total de nombres conocidos: 49                              
+2) Número total de nombres para cada objeto                           
+Objeto 0: 9                                                           
+Objeto 1: 8                                                           
+Objeto 2: 7                                                           
+Objeto 3: 6                                                           
+Objeto 4: 5                                                           
+Objeto 5: 8                                                           
+Objeto 6: 6                                                           
+3) Longitud promedio de todos los nombres: 9.306122448979592          -----------------------------------                                   -----------------------------------                                   
+Iteración 1000                                                        
+M É T R I C A S                                                       
+1) Número total de nombres conocidos: 49                              
+2) Número total de nombres para cada objeto                           
+Objeto 0: 9                                                           
+Objeto 1: 8                                                           
+Objeto 2: 7                                                           
+Objeto 3: 6                                                           
+Objeto 4: 5                                                           
+Objeto 5: 8                                                           
+Objeto 6: 6                                                           
+3) Longitud promedio de todos los nombres: 9.306122448979592          -----------------------------------                                   
+-----------------------------------                                                                                                         
