@@ -16,6 +16,7 @@ class JuegoNombres():
 		self.numeroObjetos = m
 		self.objetosGeneral = []
 		self.totalNombres = 0
+		self.end = False
 		for i in range(self.numeroObjetos):
 			self.objetosGeneral.append([])
 		# Create agentes
@@ -32,11 +33,11 @@ class JuegoNombres():
 
 	def getAllNamesObjects(self):
 		for i in range(self.numeroObjetos):
+			self.objetosGeneral[i] = []
 			for agente in self.agentes:
 				for nombre in agente.objetos[i]:
 					if nombre not in self.objetosGeneral[i]:
 						self.objetosGeneral[i].append(nombre)
-		#print(self.objetosGeneral)
 
 	def countNamesObjects(self):
 		total = 0
@@ -58,6 +59,16 @@ class JuegoNombres():
 		prom = longitud/self.totalNombres
 		print("3) Longitud promedio de todos los nombres: "+str(prom)) 
 
+	def validateEnd(self):
+		self.end = True
+		for i in range(self.numeroObjetos):
+			if len(self.objetosGeneral[i]) == 1:
+				for agente in self.agentes:
+					if len(agente.objetos[i]) == 0:
+						self.end = 0
+			else:
+				self.end = False
+
 	def showMetricas(self):
 		print("M É T R I C A S")
 		self.getAllNamesObjects()
@@ -66,14 +77,20 @@ class JuegoNombres():
 		self.namesLen()	
 	
 	def startGame(self):
-		for i in range(self.iteraciones):
+		#for i in range(self.iteraciones):
+		i = 0
+		while (not self.end) and i < self.iteraciones:
 			print("Iteración "+str(i+1))
 			self.selectAgentesObjetos()
 			self.showMetricas()
 			print("-----------------------------------")
 			print("-----------------------------------")
+			self.validateEnd()
 			if i == 9:
 				input("Press Enter to continue...")
+			if self.end:
+				i = self.iteraciones
+			i += 1
 
 if __name__ == "__main__":
 	if len(sys.argv) == 4: 

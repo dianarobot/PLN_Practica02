@@ -28,23 +28,27 @@ class Agente():
 	# k = número de objeto
 	# agenteO = Agente Oyente
 	def enunciar(self, k, agenteO):
+		#print("OYENTE")
 		#print(agenteO.objetos)
+		#print("HABLANTE")
 		#print(self.objetos)
 		nombres = self.objetos[k]
 		nombre =  self.getSmallerName(nombres)
 		if nombre == '':
 			nombre = self.generateObjectName(k)
-		# Caso 1: El oyente no tiene nombres para el k-objeto
-		if not agenteO.objetos[k]:
-			agenteO.objetos[k].append(nombre)
-		# Caso 3: El hablante y oyente coinciden en el nombre
-		elif nombre in agenteO.objetos[k]:
+
+		# Caso 1: El hablante y oyente coinciden en el nombre
+		if nombre in agenteO.objetos[k]:
 			self.objetos[k] = [nombre]
 			agenteO.objetos[k]= [nombre]
-		# Caso 2: El oyente tiene nombres pero no el del hablante
+		# Caso 2: El oyente no tiene nombres para el k-objeto
+		# Caso 3: El oyente tiene nombres pero no el del hablante
 		else:
-			agenteO.objetos[k].append(nombre)
+			agenteO.objetos[k].append(nombre) 
+
+		#print("OYENTE")
 		#print(agenteO.objetos)
+		#print("HABLANTE")
 		#print(self.objetos)
 
 	def generateObjectName(self, k):
